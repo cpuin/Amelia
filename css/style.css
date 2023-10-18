@@ -88,6 +88,10 @@ a {
     margin: 0 auto;
 }
 
+.hidden {
+	display: none;
+}
+
 .header {
     background: #81A36B;
 	padding: 25px 0;
@@ -108,7 +112,7 @@ a {
 
 .navigation {
     display: flex;
-    gap: 30px;
+    gap: 90px;
 }
 
 .section_1, .section_2, .section_4, .section_5 {
@@ -183,7 +187,6 @@ section, .footer {
 	background: #5c744c;
 }
 
-
 .section_2 {
 	padding: 120px 0;
 }
@@ -194,10 +197,18 @@ section, .footer {
 	margin: 0 auto;
 }
 
+.about_us .subtitle {
+	text-transform: uppercase;
+}
+
 .subtitle {
 	margin-bottom: 50px;
 	font-size: 32px;
 	font-family: Architects Daughter;
+}
+
+.how_we_work .subtitle {
+	text-transform: none;
 }
 
 .section_3 {
@@ -275,36 +286,58 @@ section, .footer {
 
 .footer {
 	background: #81A36B;
-	padding: 50px 0;
+	padding: 60px 0;
 }
 
-.contacts {
-	text-align: center;
-}
-
-.contacts > a {
+.footer > a {
 	display: inline-block;
 }
 
-.contacts p {
-	padding: 25px 0 15px 0;
-	font-size: 24px;
-}
-
-.contacts p:last-child {
-	padding-bottom: 0;
-	padding-top: 15px;
-	font-size: 16px;
-	font-weight: 500;
-}
-
-.contacts .helpful {
-	padding: 15px 0;
+.helpful {
+	margin-bottom: 20px;
 	font-size: 18px;
+}
+
+/* .social li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+} */
+
+.contacts {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contacts > p {
+	font-family: Roboto;
+	font-size: 24px;
+	margin-bottom: 40px;
 }
 
 .social {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	gap: 20px;
+}
+
+.data {
+	margin-top: 40px;
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.icons {
+	display: flex;
+	gap: 20px;
+}
+
+.icon {
+	fill: transparent;
+	width: 24px;
+	height: 24px;
 }
