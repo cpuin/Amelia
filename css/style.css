@@ -110,6 +110,10 @@ a {
 	font-size: 18px;
 }
 
+.navigation a:hover {
+	border-bottom: 2px solid black;
+}
+
 .navigation {
     display: flex;
     gap: 90px;
@@ -131,8 +135,8 @@ section, .footer {
 }
 
 .section_1_photo {
+	background: url(../images/photo1.png) no-repeat center / cover;
 	height: 670px;
-	flex: 1 1 540px;
 }
 
 .section_1_photo img {
@@ -170,6 +174,18 @@ section, .footer {
 	font-family: Roboto;
 	font-weight: 400;
 	padding: 20px 31px;
+	transition: all .2s linear;
+}
+
+.order_btn:hover {
+	cursor: pointer;
+	background: #698557;
+	outline: 2px solid #5c744c;
+	color: white;
+}
+
+.order_btn:active {
+	background: #5c744c;
 }
 
 .order_link {
@@ -177,14 +193,12 @@ section, .footer {
 	border-radius: 6px;
 	display: inline-block;
 	padding: 20px 16px;
+	transition: all .2s linear;
 }
 
-.order button:hover {
-	cursor: pointer;
-}
-
-.order button:active {
-	background: #5c744c;
+.order_link:hover {
+	background: #81A36B;
+	color: white;
 }
 
 .section_2 {
@@ -241,6 +255,7 @@ section, .footer {
 }
 
 .how_we_work_image {
+	background: url(../images/photo2.png) no-repeat center / cover;
 	flex: 1 1 540px;
 	height: 560px;
 }
