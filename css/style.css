@@ -86,6 +86,7 @@ a {
 .container {
     max-width: 1110px;
     margin: 0 auto;
+	padding: 0 15px;
 }
 
 .hidden {
@@ -95,6 +96,10 @@ a {
 .header {
     background: #81A36B;
 	padding: 25px 0;
+}
+
+.header_burger {
+	display: none;
 }
 
 .header .container {
@@ -289,7 +294,7 @@ section, .footer {
 	background: #81A36B;
 	text-align: center;
 	padding: 15px 15px 40px;
-	flex: 1 1 350px;
+	flex: 0 1 33.333%;
 }
 
 .card img {
@@ -313,12 +318,6 @@ section, .footer {
 	font-size: 18px;
 }
 
-/* .social li {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
-} */
 
 .contacts {
 	display: flex;
@@ -355,4 +354,278 @@ section, .footer {
 	fill: transparent;
 	width: 24px;
 	height: 24px;
+}
+
+@media (max-width: 1200px) {
+	.navigation {
+		gap: 70px;
+	}
+}
+
+@media (max-width: 992px) {
+	/*! HEADER !*/
+	.header {
+		padding: 15px 0;
+	}
+
+	.navigation {
+		gap: 40px;
+	}
+
+	.navigation a {
+		font-size: 16px;
+	}
+	/*! HEADER !*/
+
+	/*! SECTION 1 !*/
+	.amelia_flowers, .how_we_work {
+		gap: 15px;
+	}
+
+	.title {
+		font-size: 50px;
+		margin-bottom: 30px;
+	}
+
+	p {
+		font-size: 16px;
+	}
+
+	.order {
+		gap: 15px;
+	}
+
+	.order_btn, .order_link {
+		font-size: 16px;
+		padding: 20px 20px;
+	}
+
+	.section_1_photo {
+		height: 515px;
+	}
+	/*! SECTION 1 !*/
+
+	/*! Section 2 !*/
+	.subtitle {
+		margin-bottom: 30px;
+	}
+
+	.section_2 {
+		padding: 70px 0;
+	}
+
+	/*! Section 2 !*/
+
+	/*! Section 3 !*/
+	.section_3 {
+		padding: 60px 0;
+	}
+	
+	.section_3 img {
+		margin-bottom: 20px;
+		width: 60px;
+	}
+	/*! Section 3 !*/
+
+	/*! Section 4 !*/
+	.section_4 {
+		padding: 60px 0;
+	}
+	/*! Section 4 !*/
+
+	/*! Section 5 !*/
+	.cards {
+		gap: 15px;
+	}
+	/*! Section 5 !*/
+
+	/*! Footer !*/
+	.footer {
+		padding: 15px 0;
+	}
+
+	.footer p {
+		font-size: 16px;
+	}
+
+	/*! Footer !*/
+}
+
+@media (max-width: 768px) {
+	/*! HEADER !*/
+	.header {
+		padding: 10px 0;
+	}
+
+	.header img {
+		width: 100px;
+	}
+
+	.navigation {
+		gap: 15px;
+	}
+
+	.navigation a {
+		font-size: 14px;
+	}
+	/*! HEADER !*/
+
+	/*! SECTION 1 !*/
+	section {
+		text-align: center;
+	}
+
+	.title {
+		font-size: 45px;
+		margin: 25px 0;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.order {
+		justify-content: center;
+	}
+
+	.order_btn, .order_link {
+		font-size: 16px;
+		padding: 10px 10px;
+	}
+
+	.section_1_photo {
+		display: none;
+	}
+	/*! SECTION 1 !*/
+
+	/*! Section 2 !*/
+	.section_2 {
+		padding: 40px 0;
+	}
+
+	.subtitle {
+		font-size: 26px;
+	}
+	/*! Section 2 !*/
+
+	/*! Section 3 !*/
+	.section_3 {
+		padding: 40px 0;
+	}
+	/*! Section 3 !*/
+
+	/*! Section 4 !*/
+	.how_we_work_image {
+		display: none;
+	}
+
+	.section_3 {
+		padding: 40px 0;
+	}
+	/*! Section 4 !*/
+
+	/*! Section 5 !*/
+	.cards {
+		flex-flow: wrap;
+	}
+
+	.card {
+		flex: 0 1 70%;
+	}
+	/*! Section 5 !*/
+
+	/*! Footer !*/
+	.footer .helpful {
+		font-size: 14px;
+	}
+
+	.contacts img {
+		width: 100px;
+		height: 50px;
+	}
+	/*! Footer !*/
+}
+
+@media (max-width: 576px) {
+	/*! HEADER !*/
+	.navigation {
+		display: none;
+	}
+
+	.header_burger {
+		display: block;
+		width: 40px;
+		height: 30px;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.header_burger::before,
+	.header_burger::after,
+	.header_burger span {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		background: #4a5742;
+		transition: all .2s linear;
+	}
+
+	.header_burger span {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.header_burger::after {
+		top: auto;
+		bottom: 0;
+	}
+
+	.header_burger:hover span {
+		transform: translateY(-50%) scale(0);
+	}
+
+	.header_burger:hover:before {
+		transform: rotate(38deg);
+		top: 13px;
+	}
+
+	.header_burger:hover:after {
+		transform: rotate(-38deg);
+		bottom: 13px;
+	}
+	/*! HEADER !*/
+
+	/*! Section 2 !*/
+	.about_us {
+		width: 100%;
+	}
+	/*! Section 2 !*/
+
+	/*! Section 3 !*/
+	.section_3 {
+		padding: 30px 0;
+	}
+
+	.section_3 img {
+		width: 50px;
+		height: 40px;
+	}
+
+	.section_3 ul {
+		gap: 5px;
+	}
+
+	.section_3 p {
+		font-size: 12px;
+	}
+	/*! Section 3 !*/
+
+	/*! Section 5 !*/
+	.card {
+		flex: 0 1 100%;
+	}
+	/*! Section 5 !*/
 }
